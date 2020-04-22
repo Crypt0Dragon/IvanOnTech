@@ -2,6 +2,20 @@ var abi = [
   {
     "constant": true,
     "inputs": [],
+    "name": "balance_available",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
     "name": "owner",
     "outputs": [
       {
@@ -28,6 +42,12 @@ var abi = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -50,20 +70,6 @@ var abi = [
     "type": "event"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "random",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
     "inputs": [
       {
@@ -75,6 +81,46 @@ var abi = [
     "outputs": [],
     "payable": true,
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_myid",
+        "type": "bytes32"
+      },
+      {
+        "name": "_result",
+        "type": "string"
+      }
+    ],
+    "name": "__callback",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_queryId",
+        "type": "bytes32"
+      },
+      {
+        "name": "_result",
+        "type": "string"
+      },
+      {
+        "name": "_proof",
+        "type": "bytes"
+      }
+    ],
+    "name": "__callback",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -116,6 +162,43 @@ var abi = [
     ],
     "payable": false,
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPotBalance",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawFromPot",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "firstQuery",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
     "type": "function"
   }
 ]
